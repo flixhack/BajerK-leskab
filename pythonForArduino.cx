@@ -1,0 +1,19 @@
+const int fyrPin = 13;
+int n;
+
+void setup() {
+  pinMode(fyrPin, OUTPUT);
+  Serial.begin(9600);
+  n = 7;
+    
+}
+
+void loop() {
+  if(Serial.available()){
+    n = serial.read() - '0';
+  }
+  digitalWrite(fyrPin, HIGH);
+  delay(2000);
+  digitalWrite(fyrPin, LOW);
+  delay(2000);
+}
